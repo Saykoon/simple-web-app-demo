@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App - GitHub Actions Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>🚀 Simple Web App</h1>
+                <ul>
+                    <li><a href="#home">Strona główna</a></li>
+                    <li><a href="#users">Użytkownicy</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home" class="section active">
+            <h2>Witaj w aplikacji demonstracyjnej!</h2>
+            <p>Ta aplikacja została stworzona w celu pokazania działania GitHub Actions.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🔧 Automatyczne testy</h3>
+                    <p>GitHub Actions uruchamia testy przy każdym commit</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📦 Automatyczne budowanie</h3>
+                    <p>Aplikacja jest automatycznie budowana i przygotowywana do wdrożenia</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚀 Continuous Deployment</h3>
+                    <p>Automatyczne wdrażanie na serwer po udanych testach</p>
+                </div>
+            </div>
+
+            <div class="status-check">
+                <h3>Status serwera:</h3>
+                <button onclick="checkServerStatus()">Sprawdź status API</button>
+                <div id="status-result"></div>
+            </div>
+        </section>
+
+        <section id="users" class="section">
+            <h2>Lista użytkowników</h2>
+            <button onclick="loadUsers()">Załaduj użytkowników z API</button>
+            <div id="users-list"></div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Formularz kontaktowy</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Imię i nazwisko:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Wiadomość:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">Wyślij wiadomość</button>
+            </form>
+            <div id="contact-result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Simple Web App - GitHub Actions Demo</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

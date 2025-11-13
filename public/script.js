@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Check server status
+// eslint-disable-next-line no-unused-vars
 async function checkServerStatus() {
     const resultDiv = document.getElementById('status-result');
     resultDiv.innerHTML = '<div class="loading"></div> Sprawdzanie statusu...';
@@ -58,6 +59,7 @@ async function checkServerStatus() {
 }
 
 // Load users from API
+// eslint-disable-next-line no-unused-vars
 async function loadUsers() {
     const usersDiv = document.getElementById('users-list');
     usersDiv.innerHTML = '<div class="loading"></div> Ładowanie użytkowników...';
@@ -133,6 +135,7 @@ async function handleContactForm(e) {
 }
 
 // Utility function to show notifications
+// eslint-disable-next-line no-unused-vars
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
